@@ -357,6 +357,16 @@ button:hover,
   filter: brightness(90%);
 }
 
+/* FurAffinity */
+.button.button-furaffinity {
+  color: #ffffff;
+  background-color: #0084ff;
+}
+.button.button-furaffinity:hover,
+.button.button-furaffinity:focus {
+  filter: brightness(90%);
+}
+
 /* GitHub */
 .button.button-github {
   color: #ffffff;
@@ -783,6 +793,17 @@ button:hover,
 .button.button-snapchat:focus {
   filter: brightness(90%);
 }
+
+/* SoFurry */
+.button.button-sofurry {
+  color: #ffffff;
+  background-color: #ff9100;
+}
+.button.button-sofurry:hover,
+.button.button-sofurry:focus {
+  filter: brightness(90%);
+}
+
 
 /* SoundCloud */
 .button.button-soundcloud {
