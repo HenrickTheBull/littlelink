@@ -1,0 +1,39 @@
+/* Discord Banner */
+.discord-banner {
+    background-color: #7289da;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Signal Banner */
+.signal-banner {
+    background-color: #3db75e;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Telegram Banner */
+.telegram-banner {
+    background-color: #0088cc;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Guilded Banner */
+.guilded-banner {
+    background-color: #f7b500;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Session Banner */
+.session-banner {
+    background-color: #000000;
+    color: #00FF00; 
+    padding: 10px;
+    text-align: center;
+}
