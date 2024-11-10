@@ -107,7 +107,10 @@
 
       
         <!-- Bluesky -->
-        <a class="button button-bluesky" href="https://bsky.app/profile/henrick.thebull.app" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/bluesky.png" alt="">Bluesky</a><br> 
+        <bsky-widget 
+          data-handle="henrick.thebull.app"
+        >
+        </bsky-widget>
 
         <!-- Discord -->
         <a class="button button-discord" href="https://discord.infiniteuniverse.club" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/discord.svg" alt="">Discord</a><br>
@@ -194,5 +197,9 @@
   <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
-
+<script 
+  src="https://unpkg.com/bsky-widget@~0.0/dist/index.js" 
+  type="module"
+>
+</script>
 </html>

@@ -425,3 +425,11 @@ td,
 th {
   padding: 0;
 }
+
+<!-- Paste in your CSS to avoid layout shift -->
+<style>
+bsky-widget {
+  min-height: 449px;
+  width: 350px;
+}
+</style>
