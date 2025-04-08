@@ -277,3 +277,56 @@ hr {
        url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.svg#OpenSans') format('svg'); /* Legacy iOS */
 }
+
+#buttonContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#buttonContainer .separator {
+  width: 1px;
+  height: 24px;
+  background-color: #ccc;
+}
+
+/* Fly-Out Menu Button */
+#menuButton {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Fly-Out Menu */
+#flyOutMenu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #333;
+  color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  transition: left 0.3s;
+}
+
+#flyOutMenu ul {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+
+#flyOutMenu ul li {
+  margin-bottom: 15px;
+}
+
+#flyOutMenu ul li a {
+  color: #fff;
+  text-decoration: none;
+}

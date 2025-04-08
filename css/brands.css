@@ -618,6 +618,18 @@ button:hover,
   filter: brightness(90%);
 }
 
+/* Nostr */
+.button.button-nostr {
+  background-color: #a915ff; /* Replace with Nostr's brand color */
+  color: #ffffff;
+}
+
+.button.button-nostr:hover,
+.button.button-nostr:focus {
+  background-color: #8e30eb; /* Replace with a hover color */
+  color: #ffffff;
+}
+
 /* Notion */
 .button.button-notion {
   color: #000000;
