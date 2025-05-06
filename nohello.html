@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Hello - Just Ask!</title>
+    <link rel="stylesheet" href="css/nostyles.css">
+    <meta name="description" content="Stop saying just 'hello' in chat - it's not efficient! Learn why you should just ask your question directly.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+    </div>
+    
+    <header>
+        <h1>Please Don't Say Just "Hello" In Chat</h1>
+    </header>
+    
+    <main>
+        <section class="intro">
+            <p class="highlight">
+                Imagine calling someone on the phone, going "hello!" then putting them on hold...
+            </p>
+        </section>
+
+        <section class="examples">
+            <div class="bad-example">
+                <h2>❌ Don't do this</h2>
+                <div class="chat">
+                    <div class="message sender">
+                        <span class="time">2:15 PM</span>
+                        <div class="bubble">hi</div>
+                    </div>
+                    <div class="message receiver">
+                        <span class="time">2:19 PM</span>
+                        <div class="bubble">...?</div>
+                    </div>
+                    <div class="message sender">
+                        <span class="time">2:20 PM</span>
+                        <div class="bubble">what time was that meeting again?</div>
+                    </div>
+                    <div class="message receiver">
+                        <span class="time">2:20 PM</span>
+                        <div class="bubble">oh - 3:30</div>
+                    </div>
+                </div>
+                <p class="explanation">
+                    Note that the sender could have got their answer minutes sooner, and needn't have kept the receiver waiting. 
+                    In fact, the receiver could have started thinking about the question right away!
+                </p>
+            </div>
+
+            <div class="good-example">
+                <h2>✅ Instead, try this</h2>
+                <div class="chat">
+                    <div class="message sender">
+                        <span class="time">2:15 PM</span>
+                        <div class="bubble">Hi! What time was that meeting again?</div>
+                    </div>
+                    <div class="message receiver">
+                        <span class="time">2:15 PM</span>
+                        <div class="bubble">hi, 3:30</div>
+                    </div>
+                    <div class="message sender">
+                        <span class="time">2:15 PM</span>
+                        <div class="bubble">Thanks - see you then!</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="explanation">
+            <h2>Why "No Hello" matters</h2>
+            <p>
+                People who say just "hello" in chat are generally trying to be polite by not jumping right into the request,
+                like one would in person or on the phone - and that's great! But chat is neither of those things.
+            </p>
+            <p>
+                For most people, typing is much slower than talking. So despite best intentions,
+                <strong>you're actually just making the other person wait</strong> for you to phrase your question,
+                which is lost productivity (and kinda annoying).
+            </p>
+
+            <h3>The same goes for:</h3>
+            <ul>
+                <li>"Hello, are you around?"</li>
+                <li>"hi - quick question."</li>
+                <li>"You got a sec?"</li>
+                <li>"ping"</li>
+            </ul>
+            <p class="highlight">Just ask the question!</p>
+
+            <p>
+                If you feel it's a bit brusque to simply ask the question,
+                you can still preface your message with pleasantries:
+            </p>
+            <p class="example">
+                "Hey there, hope you're doing well! Do you know when that project deadline is?"
+            </p>
+        </section>
+
+        <section class="benefits">
+            <h2>Benefits of No Hello</h2>
+            <p>
+                Asking your question before getting that initial salutatory reply also allows for
+                <strong>asynchronous communication</strong>. If the other party is away, and you leave before they come back,
+                they can still answer your question, instead of just staring at a "Hello" and wondering what they missed.
+            </p>
+            <p class="highlight">When done right - everyone's happy! 🎉</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Based on the concept from <a href="http://nohello.net/en/" target="_blank">nohello.net</a></p>
+        <p>&copy; <span id="current-year">2025</span> - Self-hosted version</p>
+    </footer>
+
+    <script>
+        // Update the current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+        
+        // Function to set theme
+        function setTheme(theme) {
+            htmlElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+        }
+        
+        // Check for saved theme preference or use preferred color scheme
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        if (savedTheme) {
+            // Use saved preference if available
+            setTheme(savedTheme);
+        } else if (prefersDarkMode) {
+            // Otherwise use system preference
+            setTheme('dark');
+        }
+        
+        // Toggle theme when button is clicked
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+        });
+        
+        // Listen for changes in system preference
+        if (window.matchMedia) {
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                // Only auto-switch if user hasn't manually set a preference
+                if (!localStorage.getItem('theme')) {
+                    setTheme(e.matches ? 'dark' : 'light');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
