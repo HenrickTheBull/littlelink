@@ -888,6 +888,16 @@ button:hover,
   filter: brightness(90%);
 }
 
+/* SubscribeStar */
+.button-subscribestar {
+    color: #ffffff;
+    background-color: #009688;
+}
+.button-subscribestar:hover,
+.button-subscribestar:focus {
+    filter: brightness(90%);
+}
+
 /* Substack */
 .button.button-substack {
   color: #ffffff;
